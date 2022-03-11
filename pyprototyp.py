@@ -52,7 +52,7 @@ def pyprototyp(name="untitled", packages=[], useful=[], defs=[], classes=[]):
     f.write("\n")
     for i in range(len(defs)):
         string = inspect.getsource(defs[i])
-        string = string.replace("", "")
+        string = string.replace("tqdm", "")
         f.write(string + "\n")
 
     ### upload custom classes
@@ -60,7 +60,7 @@ def pyprototyp(name="untitled", packages=[], useful=[], defs=[], classes=[]):
     for i in range(len(classes)):
         try:
             string = inspect.getsource(classes[i])
-            string = string.replace("", "")
+            string = string.replace("tqdm", "")
             f.write(string + "\n")
         except:
             obj = classes[i]
